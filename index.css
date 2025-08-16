@@ -1,0 +1,485 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    list-style: none;
+    z-index: 1000;
+}
+
+:root {
+    --bg-color: #fff;
+    --snd-bg-color: #d5fdfe;
+    --text-color: #252706;
+    --main-color: hsla(60, 64%, 4%, 0.581);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Header Styles */
+header {
+    padding: 5rem 10%;
+}
+
+.header {
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
+}
+
+.header .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header .navbar a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+    color: hsl(65, 79%, 25%);
+}
+
+#menu-bar {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: hsl(0, 0%, 0%);
+    display: none;
+}
+
+/* Main Section-One */
+.sec-1 .slide {
+    margin-bottom: 5%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 60rem;
+    z-index: 1000;
+}
+
+.sec-1 .swiper-slide-active .content {
+    display: inline-block;
+}
+
+.sec-1 .slide .content span {
+    display: block;
+    font-size: 2.2rem;
+    color: var(--snd-bg-color);
+    padding-bottom: 1rem;
+    animation: fadeIn .4s linear backwards .2s;
+}
+
+.sec-1 .slide .content h3 {
+    font-size: 4vw;
+    color: var(--snd-bg-color);
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: var(--text-color);
+    padding: 1rem 0;
+    animation: fadeIn .4s linear backwards .4s;
+}
+
+.sec-1 .slide .content .btn {
+    animation: fadeIn .4s linear backwards .6s;
+}
+
+/* Section-Two Top-Stories */
+.heading-title {
+    padding: 1rem 5% 6rem;
+    margin: 0 auto;
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(118, 96, 42);
+}
+
+.sec-2 .content .read-more {
+    display: inline-block;
+    border: 1px solid;
+    padding: 1rem 1.8rem;
+    background: rgb(55, 143, 93);
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.1rem;
+    color: rgb(232, 232, 241);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.sec-2 .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.sec-2 .box-container .box {
+    border: var(--bg-color);
+    box-shadow: var(--snd-bg-color);
+}
+
+.sec-2 .box-container .box .image {
+    height: 25rem;
+    overflow: hidden;
+}
+
+.sec-2 .box-container .box .image img {
+    display: flex;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: .2s linear;
+}
+
+.sec-2 .box-container .box .content {
+    padding: 2rem;
+    text-align: justify;
+}
+
+.sec-2 .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: rgb(16, 15, 15);
+    text-align: center;
+}
+
+.sec-2 .box-container .box .content p {
+    font-size: 1.5rem;
+    color: hsl(345, 12%, 7%);
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+/* Section-3 Inlay */
+.sec-3 {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.inlay {
+    display: inline-block;
+    text-align: center;
+}
+
+.inlay img {
+    max-width: 100%;
+}
+
+.sec-3 .inlay span {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.sec-3 .inlay h3 {
+    margin-top: 10px;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.sec-3 .inlay .read-more {
+    display: inline-block;
+    margin-top: 5px;
+    border: 1px solid;
+    padding: 1rem 1.8rem;
+    background: rgb(55, 143, 93);
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.5rem;
+    color: rgb(232, 232, 241);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* Section-4 Profile */
+.sec-4 {
+    margin-top: 15%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.profile-content h1 {
+    margin-bottom: 5%;
+    font-size: 4rem;
+    color: green;
+}
+
+.profile-img {
+    width: 25vw;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.profile-content p {
+    text-align: justify;
+    margin-top: 5%;
+    font-size: 1.9rem;
+    color: green;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+    font-size: 18px;
+}
+
+.footer nav {
+    margin-bottom: 30px;
+}
+
+.footer nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
+
+.footer h1 {
+    margin-bottom: 25px;
+    color: #FF5733;
+    font-size: 28px;
+}
+
+.footer p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.subscription-form {
+    margin-bottom: 30px;
+}
+
+.subscription-form input {
+    padding: 15px;
+    width: 300px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.subscription-form button {
+    padding: 15px 30px;
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.subscription-form h3 {
+    margin-top: 20px;
+    color: #4CAF50;
+    font-size: 18px;
+}
+
+.social-media {
+    margin-bottom: 30px;
+}
+
+.social-media a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
+
+.copyright {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Media Queries */
+
+/* Screens up to 1366px wide */
+@media (max-width: 1366px) {
+    html {
+        font-size: 70%;
+    }
+
+    .sec-3 .inlay img {
+        max-width: 95%;
+        height: auto;
+    }
+}
+
+/* Screens up to 1200px wide */
+@media (max-width: 1200px) {
+    header {
+        padding: 3rem 5%;
+    }
+}
+
+/* Screens up to 991px wide */
+@media (max-width: 991px) {
+    html {
+        font-size: 45%;
+    }
+
+    header {
+        padding: 3rem 2rem;
+    }
+}
+
+/* Screens up to 820px wide */
+@media (max-width: 820px) {
+    .sec-3 .inlay img {
+        max-width: 99%;
+        height: auto;
+    }
+
+    .sec-4 .profile-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .sec-4 .profile-content p {
+        column-count: 1;
+        padding: 0 20px;
+        margin-top: 15px;
+    }
+}
+
+/* Screens up to 768px wide */
+@media (max-width: 768px) {
+    #menu-bar {
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-bar.bx-x {
+        transform: rotate(180deg);
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: white; /* Add a background color for the navbar */
+        padding: 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .sec-3 .inlay img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .sec-4 .profile-content {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .sec-4 .profile-content p {
+        column-count: 1;
+    }
+}
+
+/* Screens up to 480px wide */
+@media (max-width: 480px) {
+    .sec-3 .inlay img {
+        max-width: 60%;
+        height: auto;
+    }
+
+    .sec-4 .profile-content {
+        padding: 0 10px;
+    }
+
+    .sec-4 .profile-content h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .sec-4 .profile-content p {
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+}
+
+/* Screens up to 450px wide */
+@media (max-width: 450px) {
+    html {
+        font-size: 40%;
+    }
+
+    .sec-4 .profile-content {
+        padding: 0 5px;
+    }
+
+    .sec-4 .profile-content p {
+        padding: 0 5px;
+        margin-top: 5px;
+    }
+}
+
+/* Screens up to 344px wide */
+@media (max-width: 344px) {
+    .sec-4 .profile-content img {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .sec-4 .profile-content h1 {
+        font-size: 20px;
+    }
+
+    .sec-4 .profile-content p {
+        font-size: 10.4px;
+        padding: 0 10px;
+        margin-top: 10px;
+        columns: 1;
+    }
+}
